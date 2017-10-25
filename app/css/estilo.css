@@ -286,15 +286,17 @@ header {
       text-align: center;
       width: 100%; }
     .destaque .category-destaque {
-      padding-top: 30px; }
+      padding-top: 40px; }
     .destaque .btn-destaque-wrapper {
       text-align: center; } }
 
 @media (min-width: 768px) and (max-width: 1099px) {
   .destaque {
-    margin-top: 40px;
+    height: 315px;
+    margin-top: 10px;
     padding-left: 65px; }
     .destaque .title-destaque {
+      font-size: 35px;
       width: 80%; }
   .item-category {
     display: inline;
@@ -431,9 +433,7 @@ header {
         background-color: #666;
         margin-left: 10px;
         margin-top: 2px;
-        width: 92%; }
-  .destaque {
-    margin-top: 60px; } }
+        width: 92%; } }
 
 /*
     Menu Responsive Classes
