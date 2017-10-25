@@ -14,7 +14,7 @@ header {
   flex-wrap: nowrap;
   height: 60px;
   left: 0;
-  padding: 25px 100px;
+  padding: 25px 70px;
   position: fixed;
   right: 0;
   top: 0;
@@ -32,7 +32,7 @@ header {
     margin-left: -10px;
     padding-right: 25px;
     text-transform: uppercase;
-    width: 12%; }
+    width: 15%; }
     header .title-blog strong {
       font-weight: bold; }
   header nav .menu {
@@ -53,11 +53,12 @@ header {
     height: 24px;
     margin-top: 13px;
     padding: 6px 15px;
-    width: 20%; }
+    width: 50%; }
   header .btn-subscribe {
     background: transparent;
     border: 1px solid #8B8B8B;
     color: #fff;
+    cursor: pointer;
     font-size: 12px;
     font-style: italic;
     font-weight: bold;
@@ -66,7 +67,7 @@ header {
     margin-top: 13px;
     padding: 5px 15px;
     text-transform: uppercase;
-    width: 15%; }
+    width: 140px; }
 
 /*
     Imagem Destaque
@@ -76,11 +77,9 @@ header {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 370px;
-  margin-top: 110px;
-  padding-left: 170px; }
+  height: 370px; }
   .destaque .category-destaque {
-    color: #444;
+    color: #727272;
     display: block;
     font-size: 16px;
     font-style: italic;
@@ -90,8 +89,7 @@ header {
     color: #fff;
     font-size: 40px;
     line-height: 45px;
-    margin: 0;
-    width: 70%; }
+    margin: 0; }
   .destaque .btn-destaque {
     color: #e96403;
     border: 2px solid #e96403;
@@ -273,40 +271,62 @@ header {
     padding: 0; }
     .masonry .thumb {
       background-size: cover;
-      height: 300px !important; }
+      height: 250px !important; }
+    .masonry .description .title {
+      font-size: 20px; }
   .destaque {
-    padding-left: 0; }
-    .destaque .category-destaque {
-      padding-top: 100px; }
+    height: 240px;
+    margin-top: 35px;
+    padding: 0 20px; }
     .destaque .title-destaque {
       font-size: 25px;
       line-height: 25px;
       margin: 0 auto;
       text-align: center;
       width: 100%; }
+    .destaque .category-destaque {
+      padding-top: 30px; }
     .destaque .btn-destaque-wrapper {
       text-align: center; } }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1099px) {
+  .destaque {
+    margin-top: 40px;
+    padding-left: 65px; }
+    .destaque .title-destaque {
+      width: 80%; }
   .item-category {
     display: inline;
     margin: 0 10px; }
   .masonry {
-    padding: 0 35px; }
+    padding: 0; }
     .masonry .column {
-      width: 100%; }
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; }
       .masonry .column .thumb {
         background-size: cover;
-        height: 300px !important; } }
+        height: 300px !important;
+        width: 50%; }
+        .masonry .column .thumb .description .title {
+          font-size: 20px; } }
 
 @media (min-width: 1100px) {
+  .item-category {
+    display: inline;
+    margin: 0 10px; }
   .control-nav-close {
     display: none; }
+  .destaque {
+    margin-top: 110px;
+    padding-left: 170px; }
+    .destaque .title-destaque {
+      width: 65%; }
   nav {
     width: 85%; }
     nav .menu {
       display: inline-block;
-      width: 60%; }
+      width: 50%; }
   .masonry {
     align-items: stretch;
     display: flex;
@@ -314,11 +334,36 @@ header {
     justify-content: center;
     padding: 0 50px 40px 50px; }
     .masonry .column {
-      width: 29.5%; } }
+      width: 29.5%; }
+  .form {
+    float: right;
+    width: 49%; }
+    .form .input-subscribe {
+      background: transparent;
+      border: 1px solid #a4a4a4;
+      color: #fff;
+      height: 24px;
+      margin-top: 13px;
+      padding: 6px 15px;
+      width: 50%; }
+    .form .btn-subscribe {
+      background: transparent;
+      border: 1px solid #8B8B8B;
+      color: #fff;
+      cursor: pointer;
+      font-size: 12px;
+      font-style: italic;
+      font-weight: bold;
+      height: 38px;
+      margin-left: -5px;
+      margin-top: 13px;
+      padding: 5px 15px;
+      text-transform: uppercase;
+      width: 140px; } }
 
 @media (max-width: 1100px) {
   header {
-    padding: 10px 35px; }
+    padding: 0 35px; }
     header .title-blog {
       width: 50%; }
     header .control-nav {
@@ -329,7 +374,7 @@ header {
       padding: 5px 0;
       position: absolute;
       right: 20px;
-      top: 30px;
+      top: 20px;
       width: 30px;
       z-index: 2; }
       header .control-nav:before {
@@ -374,6 +419,7 @@ header {
           padding-bottom: 16px; }
           header nav .menu .menu-item a {
             color: #fff;
+            display: block;
             font-size: 18px;
             font-weight: bold; }
       header nav .input-subscribe {
@@ -388,7 +434,7 @@ header {
         margin-top: 2px;
         width: 92%; }
   .destaque {
-    margin-top: 80px; } }
+    margin-top: 60px; } }
 
 /*
     Menu Responsive Classes
