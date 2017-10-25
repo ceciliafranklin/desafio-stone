@@ -602,6 +602,13 @@ header {
     }
 }
 
+@media (min-width: 1380px) {
+    .column {
+        padding: 0;
+        width: 18.5% !important;
+    }
+}
+
 /*
     Menu Responsive Classes
 */
