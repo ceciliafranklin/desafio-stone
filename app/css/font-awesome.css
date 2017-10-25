@@ -27,3 +27,7 @@
 .fa-eye:before {
   content: "\f06e";
 }
+
+.fa-times-circle:before {
+  content: "\f057";
+}
