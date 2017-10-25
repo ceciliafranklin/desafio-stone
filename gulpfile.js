@@ -61,10 +61,21 @@ gulp.task('clean', function() {
 gulp.task('deploy', function() {
     runSequence('clean', 'sass', ['css', 'images', 'fonts'], 'serve-dist');
 
-    gulp.watch('app/scss/*.scss', ['sass']);
-    gulp.watch('app/**/*.+(html|css)', ['css'], browserSync.reload);
-    gulp.watch('app/img/*', ['images'], browserSync.reload);
-    gulp.watch('app/fonts/*', ['fonts'], browserSync.reload);
+    gulp.watch('app/scss/*.scss', function() {
+        runSequence('sass', browserSync.reload);
+    });
+
+    gulp.watch('app/**/*.+(html|css)', function() {
+        runSequence('css', browserSync.reload);
+    });
+
+    gulp.watch('app/img/*', function() {
+        runSequence('images', browserSync.reload);
+    });
+
+    gulp.watch('app/fonts/*', function() {
+        runSequence('fonts', browserSync.reload);
+    });
 });
 
 gulp.task ('dev', function() {
