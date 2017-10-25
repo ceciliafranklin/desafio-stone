@@ -424,6 +424,7 @@ header {
             font-weight: bold; }
       header nav .input-subscribe {
         background: #fff;
+        color: #000;
         display: block;
         margin-left: 10px;
         padding: 5px 14px;
